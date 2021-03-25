@@ -113,4 +113,21 @@ export default {
   unsetSourceTags(): void {
     Glean.unsetSourceTags();
   },
+
+  async testInitialize(
+      applicationId: string,
+      uploadEnabled: boolean,
+      config?: ConfigurationInterface
+  ): Promise<void> {
+    await Glean.testInitialize(applicationId, uploadEnabled, config);
+  },
+
+  async testResetGlean(
+      applicationId: string,
+      uploadEnabled: boolean,
+      config?: ConfigurationInterface
+  ): Promise<void> {
+    await Glean.testResetGlean(applicationId, uploadEnabled, config);
+  },
+
 };
